@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visually hidden text testing with spaces/capitalization</title>
+    <style>
+         .sr-only {
+          clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;   
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Visually hidden text testing</h1>
+    <span>Visually hidden text "go to" precedes "step 1"/"Step 1"</span>
+    <h2>No capitalization + No spaces</h2>
+          <div><span class="sr-only">go to</span>step 1</div>
+    <h2>No capitalization + Two spaces </h2>
+          <div><span class="sr-only">go to </span> step 1</div>
+    
+        <h2>Capitalization + No spaces</h2>
+          <div><span class="sr-only">Go to</span>Step 1</div>
+    <h2>Capitalization + Two spaces</h2>
+          <div><span class="sr-only">go to </span> Step 1</div>
+  </body>
+</html>
